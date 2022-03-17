@@ -1,6 +1,7 @@
 import os
 import datetime
 import json
+import django_heroku
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
@@ -150,3 +151,4 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
+django_heroku.settings(locals())
