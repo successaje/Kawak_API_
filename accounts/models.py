@@ -30,7 +30,7 @@ class UserManager(BaseUserManager):
         if password is None:
             raise TypeError("Password shouldnt be none")
 
-        user = self.create_user(username,first_name, last_name, email, password)
+        user = self.create_user(username = username,first_name = first_name, last_name = last_name, email = self.normalize_email(email), password = password)
         user.is_superuser = True
         user.is_staff = True
         user.save()
@@ -48,7 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     updated_at = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELD = ['username', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     objects = UserManager()
 
