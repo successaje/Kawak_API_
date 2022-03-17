@@ -12,7 +12,7 @@ CORS_ORIGIN_WHITELIST = [
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ('SECRET_KEY')
+SECRET_KEY = "eko5y90dv=o)+-h-#hlk(is4&bbsq#1au(*f*kmgyd618d_mg4"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Essay',
     'EssayReviews',
     'main',
+    'contacts',
 ]
 
 SWAGGER_SETTINGS = {

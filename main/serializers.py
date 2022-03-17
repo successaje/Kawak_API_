@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import WaitingList
 
-class WaitingList(serializers.ModelSerializer):
+class WaitingListSerializer(serializers.ModelSerializer):
 
     class Meta:
 
@@ -19,3 +19,5 @@ class WaitingList(serializers.ModelSerializer):
         name = attrs.get('name', '',)
 
         return attrs
+
+        

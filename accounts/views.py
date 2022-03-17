@@ -14,7 +14,7 @@ from rest_framework import generics, status, views
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from .serializers import EmailVerificationSerializer, RegisterSerializer, LoginSerializer, ResetPasswordEmailRequestSerializer, SetNewPasswordSerializer
+from .serializers import EmailVerificationSerializer, PasswordTokenCheckSerializer, RegisterSerializer, LoginSerializer, ResetPasswordEmailRequestSerializer, SetNewPasswordSerializer
 from .models import User
 from .utils import Util
 from .renderers import UserRenderer
@@ -137,7 +137,7 @@ class RequestPasswordResetEmail(generics.GenericAPIView):
 
 class PasswordTokenCheckAPI(generics.GenericAPIView):
 
-    
+    serializer_class = PasswordTokenCheckSerializer
 
     def get(self, request, uidb64, token):
          

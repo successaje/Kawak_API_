@@ -12,7 +12,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Kawak API",
       default_version='v1',
-      description="Test description",
+      description="A Backend API for Kawak",
       terms_of_service="https://www.Kawak.com/policies/terms/",
       contact=openapi.Contact(email="contact@kawak.local"),
       license=openapi.License(name="Test License"),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('auth/', include('accounts.urls')),
     path('essays/', include('Essay.urls')),
     path('essays/reviews/', include('EssayReviews.urls')),
+    path('contact-us/', include('contacts.urls')),
     path('waiting-list/', include('main.urls')),
     #path('swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

@@ -123,6 +123,8 @@ class ResetPasswordEmailRequestSerializer(serializers.Serializer):
 
     #         return super().validate[attrs]
 
+class PasswordTokenCheckSerializer(serializers.Serializer):
+    pass
 
 class SetNewPasswordSerializer(serializers.Serializer):
     password = serializers.CharField(min_length = 8, max_length = 16, write_only = True)
