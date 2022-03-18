@@ -83,7 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'BACKEND.wsgi.application'
 
-# Database
 
 DATABASES = {
     'default': {
