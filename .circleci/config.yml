@@ -40,7 +40,7 @@ jobs:
           # This assumes pytest is installed via the install-package step above
           command: |
             cd /Desktop/Documents/GitHub/Kawak_API
-            python manage.py test
+            python3 manage.py test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
