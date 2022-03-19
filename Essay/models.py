@@ -29,7 +29,7 @@ class Essay(models.Model):
     ]
     Author  = models.ForeignKey(to = User, on_delete=models.CASCADE)
     Title = models.TextField(max_length = 512)
-    Topic = models.CharField(choices = CATEGORY_OPTIONS, max_length=255)
+    Topic = models.CharField(choices = CATEGORY_OPTIONS, max_length=50)
     EssayContent = models.TextField(default=False)
     Created_at = models.DateTimeField(auto_now=True)
     TokenCost = models.IntegerField()

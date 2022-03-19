@@ -6,7 +6,6 @@ class EssayReview(models.Model):
     CATEGORY_OPTIONS = [
         ('Art', 'Art'),
         ('Anatomy', 'Anatomy'),
-        ('Biology', 'Biology'),
         ('Blockchain', 'Blockchain'),
         ('Business', 'Business'),
         ('Comedy', 'Comedy'),
@@ -27,8 +26,9 @@ class EssayReview(models.Model):
         ('Sciences', 'Sciences'),
         ('Others', 'Others'),
     ]
+    
     Reviewer  = models.ForeignKey(to = User, on_delete=models.CASCADE)
-    Title = models.TextField(max_length = 512)
+    Title = models.TextField(max_length = 50)
     Topic = models.CharField(choices = CATEGORY_OPTIONS, max_length=255)
     EssayReviewContent = models.TextField(default=False)
     submitted_at = models.DateTimeField(auto_now=True)
