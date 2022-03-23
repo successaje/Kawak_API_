@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('accounts.urls')),
     path('essays/', include('Essay.urls')),
-    path('essays/reviews/', include('EssayReviews.urls')),
+    path('essaysreviews/', include('EssayReviews.urls')),
     path('contact-us/', include('contacts.urls')),
     path('waiting-list/', include('main.urls')),
     #path('swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
