@@ -2,6 +2,7 @@ import os
 import datetime
 import json
 import django_heroku
+import socket
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:4200",
@@ -14,9 +15,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "eko5y90dv=o)+-h-#hlk(is4&bbsq#1au(*f*kmgyd618d_mg4"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+if socket.gethostname() == "server_name":
+    DEBUG = False
+    ALLOWED_HOSTS = [".herokuapp.com",]
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1",]
+
+
 
 AUTH_USER_MODEL = 'accounts.User'
 
