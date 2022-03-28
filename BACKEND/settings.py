@@ -6,6 +6,10 @@ import django_heroku
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
     "http://127.0.0.1:4200",
+    "https://localhost:4200",
+    "https://127.0.0.1:4200",
+    "localhost:4200",
+    "127.0.0.1:4200",
 ]
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
