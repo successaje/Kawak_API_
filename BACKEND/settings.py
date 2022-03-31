@@ -3,15 +3,6 @@ import datetime
 import json
 import django_heroku
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",
-    "http://127.0.0.1:4200",
-    "https://localhost:4200",
-    "https://127.0.0.1:4200",
-    "localhost:4200",
-    "127.0.0.1:4200",
-]
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -65,6 +56,14 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "http://127.0.0.1:4200",
+    "https://localhost:4200",
+    "https://127.0.0.1:4200",
+    "127.0.0.1:4200",
 ]
 
 ROOT_URLCONF = 'BACKEND.urls'
