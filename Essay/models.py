@@ -112,6 +112,8 @@ def pre_save_essay_receiver(sender, instance, *args, **kwargs):
         html_string = instance.get_markdown()
         words_count = count_words(html_string)
         instance.count_words = words_count
+        if instance.count_words < 100:
+            return ("Minimum word count must be 100")
 
 pre_save.connect(pre_save_essay_receiver, sender= Essay)
 

@@ -93,6 +93,7 @@ class EssayReviewListSerializer(ModelSerializer):
         return 0
 
 class EssayReviewDetailSerializer(ModelSerializer):
+    user = UserDetail
     reviews_count = SerializerMethodField()
     content_object_url = SerializerMethodField()
     reviews = SerializerMethodField()
